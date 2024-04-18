@@ -2,6 +2,7 @@
 import Button from '../Button/Button.jsx'
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import Header from '../Header.jsx'
 
 function CreatePlaylist(props) {
     const navigate = useNavigate()
@@ -30,6 +31,7 @@ function CreatePlaylist(props) {
 
     return (
         <div className="columns">
+            <Header text="Create a playlist" />
             <input id="playlistName" placeholder="Playlist name"/>
             <Button text="Create" clickEvent={createplaylistClickEvent} />
         </div>

@@ -49,6 +49,7 @@ function AddSong() {
 
     return (
         <div className="columns">
+            <Header text="Add a song" />
             <input placeholder="Your name" ref={inputField} />
             <input placeholder="Search for a song" onChange={searchUpdate} />
             {songs.map((elem, index) => {

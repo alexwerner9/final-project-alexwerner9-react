@@ -3,6 +3,7 @@ import Button from '../Button/Button.jsx'
 import './Login.css'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import Header from '../Header.jsx'
 
 function Login() {
     const navigate = useNavigate();
@@ -37,6 +38,7 @@ function Login() {
 
     return(
         <div className="columns">
+            <Header text="Log in" />
             {authError && <div class="error">Authentication failed</div>}
             <input id="username" placeholder="Username"></input>
             <input id="password" type="password"  placeholder="Password"></input>

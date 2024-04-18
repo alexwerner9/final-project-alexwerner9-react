@@ -1,6 +1,7 @@
 import Button from '../Button/Button.jsx'
 import './CreateAccount.css'
 import { useNavigate } from "react-router-dom";
+import Header from '../Header.jsx'
 
 function CreateAccount() {
     const navigate = useNavigate()
@@ -29,6 +30,7 @@ function CreateAccount() {
 
     return(
         <div className="columns">
+            <Header text="Create an account" />
             <input id="username" placeholder="Username"></input>
             <input id="password" type="password" placeholder="Password"></input>
             <Button clickEvent={createaccountClickEvent} text="Create account"></Button>
