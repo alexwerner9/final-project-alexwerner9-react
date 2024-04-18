@@ -1,0 +1,26 @@
+.track {
+    text-align: left;
+    background-color: rgb(30,30,30);
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    align-items: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    transition: 0.1s;
+}
+
+.track-info {
+    text-align: left;
+}
+
+.added-by {
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.track:hover {
+    background-color: rgb(21,21,21);
+    transform: translateX(0.5rem);
+}
