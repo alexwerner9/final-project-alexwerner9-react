@@ -13,10 +13,8 @@ function LoggedIn() {
     })
 
     async function getUsername() {
-        console.log(import.meta.env)
         const resp = await fetch(import.meta.env.VITE_API_URL+'/getusername/'+localStorage.getItem('loginToken'))
         const respJson = await resp.json()
-        console.log(respJson)
         const username = respJson['username']
         setText("Hello " + username)
     }

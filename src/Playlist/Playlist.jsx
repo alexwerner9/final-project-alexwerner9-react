@@ -35,7 +35,6 @@ function Playlist() {
             })
         })
         const respJson = await resp.json()
-        console.log(respJson)
         navigate('/myplaylists')
     }
 

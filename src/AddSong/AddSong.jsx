@@ -30,7 +30,6 @@ function AddSong() {
 
     async function songClickEvent(evt) {
         const song = songs[evt.target.id]
-        console.log("NAME", inputField.current.value)
         const resp = await fetch(import.meta.env.VITE_API_URL+'/addsong', {
             method: "POST",
             headers: {
@@ -45,7 +44,6 @@ function AddSong() {
             })
         })
         const respJson = await resp.json()
-        console.log(respJson)
         navigate('/playlist/'+playlistUuid)
     }
 

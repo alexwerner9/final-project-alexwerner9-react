@@ -20,7 +20,6 @@ function ProtectedRoute(props) {
     if(!localStorage.getItem('loginToken')) {
       return <Navigate to="/" replace />;
     }
-    console.log(props)
     return props.child;
 }
 
