@@ -24,7 +24,7 @@ function CreateAccount() {
             console.log(respJson.error)
         } else {
             localStorage.setItem("loginToken", loginToken)
-            navigate('/myaccount')
+            navigate('/')
         }
     }
 

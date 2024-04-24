@@ -67,3 +67,13 @@ p {
     justify-content: center;
     flex-direction: row;
 }
+
+#home-button {
+    position: absolute;
+    z-index: 100;
+    left: 2rem;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

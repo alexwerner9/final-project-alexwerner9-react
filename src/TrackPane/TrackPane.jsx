@@ -8,7 +8,14 @@ function TrackPane(props) {
             <div id="track-pane">
                 <ol>
                     {props.tracks.map((elem, index) => {
-                            return <li><Track index={index+1} name={elem.name} artist={elem.artist} addedBy={elem.addedBy} /></li>
+                            return <li key={elem.spotifyUrl}>
+                                        <Track 
+                                            index={index+1} 
+                                            name={elem.name} 
+                                            artist={elem.artist} 
+                                            spotifyUrl={elem.spotifyUrl} 
+                                            addedBy={elem.addedBy} />
+                                    </li>
                         })}
                 </ol>
             </div>

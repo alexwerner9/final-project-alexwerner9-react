@@ -26,7 +26,7 @@ function Login() {
         const loginToken = respJson['loginToken']
         if(loginToken) {
             localStorage.setItem('loginToken', loginToken)
-            navigate('/myaccount')
+            navigate('/')
         } else {
             setAuthError(true)
         }

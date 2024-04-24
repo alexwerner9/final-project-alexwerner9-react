@@ -6,10 +6,6 @@ a:hover {
     color: green;
 }
 
-button {
-    margin-bottom: 1rem;
-}
-
 .error {
     font-size: 1.3rem;
     padding: 0.2rem;

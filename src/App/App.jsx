@@ -2,22 +2,19 @@ import './App.css'
 import Button from '../Button/Button.jsx'
 import Header from '../Header.jsx'
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react"
+import { isLoggedIn } from '../auth.js'
+import LoggedIn from '../LoggedIn/LoggedIn.jsx'
+import NotLoggedIn from '../NotLoggedIn/NotLoggedIn.jsx';
 
 function App() {
-  const navigate = useNavigate();
-  const createNewPlaylistOnClick = evt => {
-    alert("CREATE PLAYLIST")
+  if(isLoggedIn()) {
+    return <LoggedIn />
+  } else {
+    return (
+      <NotLoggedIn />
+    )
   }
-  const loginOnClick = evt => {
-    navigate('/login')
-  }
-  return (
-    <div id="main-div">
-      <Header text="Welcome!" />
-      <Button text="Create a new communal playlist" clickEvent={createNewPlaylistOnClick} />
-      <Button text="Log in" clickEvent={loginOnClick} />
-    </div>
-  )
 }
 
 export default App

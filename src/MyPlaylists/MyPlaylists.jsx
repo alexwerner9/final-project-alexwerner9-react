@@ -2,6 +2,8 @@ import Button from '../Button/Button.jsx'
 import Header from '../Header.jsx'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import './MyPlaylists.css'
+import ListItem from '../ListItem/ListItem.jsx'
 
 function MyPlaylists(props) {
     const navigate = useNavigate()
@@ -20,12 +22,19 @@ function MyPlaylists(props) {
         }
         getPlaylists()
     }, [])
-
-    let ret = <div className="columns">
-        <Header text="My Playlists" />
-        {playlists.map((val) => <Button clickEvent={playlistClickEvent} text={val.playlistName} id={val.playlistUuid} key={val.playlistUuid} />)}
-    </div>
-    return ret;
+ 
+    return (
+        <div className="columns">
+            <Header text="My Playlists" />
+            <div id="playlists-wrapper">
+                {playlists ? playlists.map((val) => <ListItem clickEvent={playlistClickEvent} 
+                                                               text={val.playlistName} 
+                                                               id={val.playlistUuid} 
+                                                               key={val.playlistUuid} />)
+                                                               : "No playlists yet"}
+            </div>
+        </div>
+    );
 }
 
 export default MyPlaylists

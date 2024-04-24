@@ -39,6 +39,7 @@ function AddSong() {
                 name: song.name,
                 artist: song.artist,
                 uri: song.uri,
+                spotifyUrl: song.spotifyUrl,
                 playlistUuid: playlistUuid,
                 addedBy: inputField.current.value
             })

@@ -3,26 +3,33 @@ import './LoggedIn.css'
 import Header from '../Header.jsx'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import NotLoggedIn from '../NotLoggedIn/NotLoggedIn.jsx';
 
 function LoggedIn() {
     const navigate = useNavigate();
-    const [text, setText] = useState("Hello")
+
+    let username = localStorage.getItem('username')
+    const [text, setText] = useState(username ? "Hello " + username + "!" : "Hello")
 
     useEffect(() => {
-        
+        getUsername()
     })
 
     async function getUsername() {
-        const resp = await fetch(import.meta.env.VITE_API_URL+'/getusername/'+localStorage.getItem('loginToken'))
-        const respJson = await resp.json()
-        const username = respJson['username']
-        setText("Hello " + username)
+        let username = localStorage.getItem('username')
+        if(!username) {
+            console.log("NOT FOUND")
+            const resp = await fetch(import.meta.env.VITE_API_URL+'/getusername/'+localStorage.getItem('loginToken'))
+            const respJson = await resp.json()
+            const username = respJson['username']
+            localStorage.setItem('username', username)
+            setText("Hello " + username)
+        }
     }
-    getUsername()
-
     function logoutClickEvent() {
         localStorage.removeItem('loginToken')
-        navigate('/')
+        localStorage.removeItem('username')
+        window.location.reload()
     }
 
     function createplaylistClickEvent() {

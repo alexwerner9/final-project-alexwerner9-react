@@ -21,6 +21,7 @@
 }
 
 .track:hover {
-    background-color: rgb(21,21,21);
-    transform: translateX(0.5rem);
+    background-color: #1DB954;
+    color: black;
+    cursor: pointer;
 }

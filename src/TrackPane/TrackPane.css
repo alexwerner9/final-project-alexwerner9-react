@@ -9,6 +9,7 @@
     margin: 0;
     border-top: 1px solid white;
     background-color: rgb(30,30,30);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 }
 ol {
     padding: 0;

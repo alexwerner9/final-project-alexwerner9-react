@@ -8,6 +8,7 @@ import CreatePlaylist from './CreatePlaylist/CreatePlaylist.jsx'
 import Playlist from './Playlist/Playlist.jsx'
 import MyPlaylists from './MyPlaylists/MyPlaylists.jsx'
 import AddSong from './AddSong/AddSong.jsx'
+import Button from './Button/Button.jsx'
 import './index.css'
 import { isLoggedIn } from './auth.js'
 
@@ -25,6 +26,7 @@ function ProtectedRoute(props) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Button id="home-button" text="Home" clickEvent={() => {window.location.href="/"}} />
     <BrowserRouter>
       <Routes>
         <Route index element={<App />}></Route>
