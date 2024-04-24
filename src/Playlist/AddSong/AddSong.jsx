@@ -1,8 +1,8 @@
 
 import React, { Component, useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../Header.jsx'
-import Button from '../Button/Button.jsx'
+import Header from '../../Common/Header/Header.jsx'
+import Button from '../../Common/Button/Button.jsx'
 
 function AddSong() {
     const navigate = useNavigate()

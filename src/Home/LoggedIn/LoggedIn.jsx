@@ -1,6 +1,6 @@
-import Button from '../Button/Button.jsx'
+import Button from '../../Common/Button/Button.jsx'
 import './LoggedIn.css'
-import Header from '../Header.jsx'
+import Header from '../../Common/Header/Header.jsx'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import NotLoggedIn from '../NotLoggedIn/NotLoggedIn.jsx';

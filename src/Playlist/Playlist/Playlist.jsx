@@ -1,10 +1,10 @@
 
 import React, { Component, useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../Header.jsx'
+import Header from '../../Common/Header/Header.jsx'
 import TrackPane from '../TrackPane/TrackPane.jsx'
-import Button from '../Button/Button.jsx'
-import Divider from '../Divider/Divider.jsx'
+import Button from '../../Common/Button/Button.jsx'
+import Divider from '../../Common/Divider/Divider.jsx'
 import './Playlist.css'
 
 function Playlist() {

@@ -25,7 +25,8 @@ button {
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
-    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
 }
     
 button:hover,

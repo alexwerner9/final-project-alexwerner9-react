@@ -1,9 +1,9 @@
-import Button from '../Button/Button.jsx'
-import Header from '../Header.jsx'
+import Button from '../../Common/Button/Button.jsx'
+import Header from '../../Common/Header/Header.jsx'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './MyPlaylists.css'
-import ListItem from '../ListItem/ListItem.jsx'
+import ListItem from '../../Common/ListItem/ListItem.jsx'
 
 function MyPlaylists(props) {
     const navigate = useNavigate()

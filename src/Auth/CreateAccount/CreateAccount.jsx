@@ -1,7 +1,7 @@
-import Button from '../Button/Button.jsx'
+import Button from '../../Common/Button/Button.jsx'
 import './CreateAccount.css'
 import { useNavigate } from "react-router-dom";
-import Header from '../Header.jsx'
+import Header from '../../Common/Header/Header.jsx'
 
 function CreateAccount() {
     const navigate = useNavigate()
@@ -28,11 +28,17 @@ function CreateAccount() {
         }
     }
 
+    function enterPressed(evt) {
+        if(evt.key == 'Enter') {
+            createaccountClickEvent()
+        }
+    }
+
     return(
         <div className="columns">
             <Header text="Create an account" />
-            <input id="username" placeholder="Username"></input>
-            <input id="password" type="password" placeholder="Password"></input>
+            <input id="username" placeholder="Username" onKeyUp={enterPressed}></input>
+            <input id="password" type="password"  placeholder="Password" onKeyUp={enterPressed}></input>
             <Button clickEvent={createaccountClickEvent} text="Create account"></Button>
         </div>
     )
